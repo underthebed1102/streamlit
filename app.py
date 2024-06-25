@@ -1,20 +1,14 @@
 from PIL import Image
 import streamlit as st
 import requests
-from streamlit_lottie import st_lottie
 st.set_page_config(page_title="Our Journey", page_icon=":tada:", layout="wide")
 
-def load_lottieurl(url):
-    r = requests.get(url)
-    if r.status_code !=200:
-        return None
-    return r.json()
+
 #Load Asset
 img_2 = Image.open("images/2.png")
 img_3 = Image.open("images/3.jpg")
 img_contact_form = Image.open("images/1.jpg")
 #img_lottie_annimation = Image.open
-lottie_coding = load_lottieurl("https://lottie.host/711643c8-432f-4b2c-8ba3-4c4d8f144a6c/O60cU0ZZIu.json")
 #HEADER
 with st.container():
     st.subheader("Halo, ini aku bubuw mu tersayang yang masih sering bikin kamu marah:wave:")
@@ -22,7 +16,7 @@ with st.container():
     st.write("Perjalanan yang dimulai dari gimik dan selera humor yang agak random")
 with st.container():  
     st.write("---")
-    left_column, right_column = st.columns(2)
+    left_column = st.columns(2)
 with left_column:
     st.header("Permulaan")
     st.write("##")
@@ -32,9 +26,6 @@ with left_column:
     Dan aku bersyukur karena tugas waktu itu aku dipertemukan sama kamu.
     """
             )
-
-with right_column:
-    st_lottie(lottie_coding, height=300, key="dating")
 
 with st.container():
     st.write("---")
