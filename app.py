@@ -5,9 +5,9 @@ st.set_page_config(page_title="Our Journey", page_icon=":tada:", layout="wide")
 
 
 #Load Asset
-img_2 = Image.open("steamlit/images/2.png")
-img_3 = Image.open("streamlit/images/3.jpg")
-img_contact_form = Image.open("streamlit/images/1.jpg")
+img_2 = Image.open("workspaces/steamlit/images/2.png")
+img_3 = Image.open("workspaces/streamlit/images/3.jpg")
+img_contact_form = Image.open("workspaces/streamlit/images/1.jpg")
 #img_lottie_annimation = Image.open
 #HEADER
 with st.container():
@@ -16,7 +16,7 @@ with st.container():
     st.write("Perjalanan yang dimulai dari gimik dan selera humor yang agak random")
 with st.container():  
     st.write("---")
-    left_column = st.columns(2)
+    left_column, right_column = st.columns(2)
 with left_column:
     st.header("Permulaan")
     st.write("##")
